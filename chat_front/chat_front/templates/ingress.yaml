@@ -32,9 +32,14 @@ spec:
         paths:
 	{{- range $ingressPaths }}
           - path: {{ . }}
+            pathType: ImplementationSpecific
             backend:
-              serviceName: {{ $fullName }}
-              servicePort: http
+              service:
+                name: {{ $fullName }}
+                port:
+                  name: http
+              # serviceName: {{ $fullName }}
+              # servicePort: http
 	{{- end }}
   {{- end }}
 {{- end }}

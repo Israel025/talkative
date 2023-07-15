@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: chat_front
-  tag: v1
+  repository: izzyadmin/chat_front
+  tag: latest
   pullPolicy: IfNotPresent
 
 nameOverride: ""
